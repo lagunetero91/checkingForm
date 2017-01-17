@@ -16,5 +16,22 @@ namespace Checking_Form
         {
             InitializeComponent();
         }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string country= textBoxCountry.Text;
+            string name = textBoxName.Text;
+            string surname1 = textBoxSurname1.Text;
+            string surname2 = textBoxSurname2.Text;
+            string id = textBoxNumber.Text;
+            string sex = comboBoxSex.Text;
+            
+
+        }
     }
 }
