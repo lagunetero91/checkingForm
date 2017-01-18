@@ -46,9 +46,9 @@
             this.textBoxSurname2 = new System.Windows.Forms.TextBox();
             this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.textBoxCountry = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerExpedition = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBirth = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerIn = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1
@@ -211,36 +211,36 @@
             this.textBoxCountry.Size = new System.Drawing.Size(147, 20);
             this.textBoxCountry.TabIndex = 17;
             // 
-            // dateTimePicker1
+            // dateTimePickerExpedition
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(505, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dateTimePickerExpedition.Location = new System.Drawing.Point(505, 57);
+            this.dateTimePickerExpedition.Name = "dateTimePickerExpedition";
+            this.dateTimePickerExpedition.Size = new System.Drawing.Size(127, 20);
+            this.dateTimePickerExpedition.TabIndex = 18;
             // 
-            // dateTimePicker2
+            // dateTimePickerBirth
             // 
-            this.dateTimePicker2.CustomFormat = "ddmmYYYY";
-            this.dateTimePicker2.Location = new System.Drawing.Point(143, 135);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePickerBirth.CustomFormat = "ddmmYYYY";
+            this.dateTimePickerBirth.Location = new System.Drawing.Point(143, 135);
+            this.dateTimePickerBirth.Name = "dateTimePickerBirth";
+            this.dateTimePickerBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBirth.TabIndex = 19;
             // 
-            // dateTimePicker3
+            // dateTimePickerIn
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(143, 169);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 20;
+            this.dateTimePickerIn.Location = new System.Drawing.Point(143, 169);
+            this.dateTimePickerIn.Name = "dateTimePickerIn";
+            this.dateTimePickerIn.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerIn.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 254);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerIn);
+            this.Controls.Add(this.dateTimePickerBirth);
+            this.Controls.Add(this.dateTimePickerExpedition);
             this.Controls.Add(this.textBoxCountry);
             this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.textBoxSurname2);
@@ -286,9 +286,9 @@
         private System.Windows.Forms.TextBox textBoxSurname2;
         private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.TextBox textBoxCountry;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerExpedition;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBirth;
+        private System.Windows.Forms.DateTimePicker dateTimePickerIn;
     }
 }
 

@@ -29,9 +29,14 @@ namespace Checking_Form
             string surname1 = textBoxSurname1.Text;
             string surname2 = textBoxSurname2.Text;
             string id = textBoxNumber.Text;
-            string sex = comboBoxSex.Text;
-            
-
+            string sex = comboBoxSex.SelectedValue.ToString();
+            string documentTipe = comboBoxDocumentTipe.SelectedValue.ToString();
+            string fechIn = dateTimePickerIn.Value.ToString("YYYY/mm/dd");
+            string birth = dateTimePickerBirth.Value.ToString("YYYY/mm/dd");
+            string fechExp = dateTimePickerExpedition.Value.ToString("YYYY/mm/dd");
+            string formatString = "2||" + id + "|" + documentTipe + "|" + fechExp +"|"+ surname1 + "|" + surname2 + "|" + name + "|" +
+                "|" + sex + "|" + birth + "|" + country.ToUpper() + "|" + fechIn + "|";
         }
     }
+
 }
