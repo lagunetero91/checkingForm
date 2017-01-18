@@ -153,6 +153,7 @@
             // 
             // comboBoxSex
             // 
+            this.comboBoxSex.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxSex.FormattingEnabled = true;
             this.comboBoxSex.Items.AddRange(new object[] {
             "Mujer",
@@ -161,6 +162,8 @@
             this.comboBoxSex.Name = "comboBoxSex";
             this.comboBoxSex.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSex.TabIndex = 11;
+            this.comboBoxSex.SelectedIndexChanged += new System.EventHandler(this.comboBoxSex_SelectedIndexChanged);
+            this.comboBoxSex.SelectedIndex = 0;
             // 
             // comboBoxDocumentTipe
             // 
@@ -174,6 +177,7 @@
             this.comboBoxDocumentTipe.Name = "comboBoxDocumentTipe";
             this.comboBoxDocumentTipe.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDocumentTipe.TabIndex = 12;
+            this.comboBoxDocumentTipe.SelectedIndex = 0;
             // 
             // textBoxName
             // 
@@ -217,10 +221,14 @@
             this.dateTimePickerExpedition.Name = "dateTimePickerExpedition";
             this.dateTimePickerExpedition.Size = new System.Drawing.Size(127, 20);
             this.dateTimePickerExpedition.TabIndex = 18;
+            this.dateTimePickerExpedition.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerExpedition.CustomFormat = "yyyy/MM/dd";
+
             // 
             // dateTimePickerBirth
             // 
-            this.dateTimePickerBirth.CustomFormat = "ddmmYYYY";
+            this.dateTimePickerBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerBirth.CustomFormat = "yyyy/MM/dd";
             this.dateTimePickerBirth.Location = new System.Drawing.Point(143, 135);
             this.dateTimePickerBirth.Name = "dateTimePickerBirth";
             this.dateTimePickerBirth.Size = new System.Drawing.Size(200, 20);
@@ -232,6 +240,8 @@
             this.dateTimePickerIn.Name = "dateTimePickerIn";
             this.dateTimePickerIn.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerIn.TabIndex = 20;
+            this.dateTimePickerIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerIn.CustomFormat = "yyyy/MM/dd";
             // 
             // Form1
             // 

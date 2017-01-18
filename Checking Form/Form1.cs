@@ -40,6 +40,11 @@ namespace Checking_Form
             System.IO.File.AppendAllText(@"C:\Users\david\Desktop\register.txt", formatString);
             
         }
+
+        private void comboBoxSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
