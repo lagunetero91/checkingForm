@@ -7,3 +7,4 @@ c:\users\david\documents\visual studio 2015\Projects\Checking Form\Checking Form
 c:\users\david\documents\visual studio 2015\Projects\Checking Form\Checking Form\obj\Debug\Checking Form.csproj.GenerateResource.Cache
 c:\users\david\documents\visual studio 2015\Projects\Checking Form\Checking Form\obj\Debug\Checking Form.exe
 c:\users\david\documents\visual studio 2015\Projects\Checking Form\Checking Form\obj\Debug\Checking Form.pdb
+C:\Users\david\Documents\Visual Studio 2015\Projects\Checking Form\Checking Form\obj\Debug\Checking Form.csproj.ResolveComReference.cache

@@ -49,11 +49,24 @@
             this.dateTimePickerExpedition = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBirth = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerIn = new System.Windows.Forms.DateTimePicker();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.dataGridInfo = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(419, 202);
+            this.button1.Location = new System.Drawing.Point(426, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 37);
             this.button1.TabIndex = 0;
@@ -63,12 +76,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(523, 203);
+            this.button2.Location = new System.Drawing.Point(530, 180);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 36);
             this.button2.TabIndex = 1;
             this.button2.Text = "Imprimir y Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -127,7 +141,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 135);
+            this.label7.Location = new System.Drawing.Point(27, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 13);
             this.label7.TabIndex = 8;
@@ -145,7 +159,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(30, 169);
+            this.label9.Location = new System.Drawing.Point(267, 141);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 13);
             this.label9.TabIndex = 10;
@@ -162,7 +176,6 @@
             this.comboBoxSex.Name = "comboBoxSex";
             this.comboBoxSex.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSex.TabIndex = 11;
-            this.comboBoxSex.SelectedIndexChanged += new System.EventHandler(this.comboBoxSex_SelectedIndexChanged);
             this.comboBoxSex.SelectedIndex = 0;
             // 
             // comboBoxDocumentTipe
@@ -185,7 +198,6 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(111, 20);
             this.textBoxName.TabIndex = 13;
-            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // textBoxSurname1
             // 
@@ -198,7 +210,7 @@
             // 
             this.textBoxSurname2.Location = new System.Drawing.Point(489, 25);
             this.textBoxSurname2.Name = "textBoxSurname2";
-            this.textBoxSurname2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSurname2.Size = new System.Drawing.Size(117, 20);
             this.textBoxSurname2.TabIndex = 15;
             // 
             // textBoxNumber
@@ -217,37 +229,136 @@
             // 
             // dateTimePickerExpedition
             // 
+            this.dateTimePickerExpedition.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerExpedition.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerExpedition.Location = new System.Drawing.Point(505, 57);
             this.dateTimePickerExpedition.Name = "dateTimePickerExpedition";
-            this.dateTimePickerExpedition.Size = new System.Drawing.Size(127, 20);
+            this.dateTimePickerExpedition.Size = new System.Drawing.Size(101, 20);
             this.dateTimePickerExpedition.TabIndex = 18;
-            this.dateTimePickerExpedition.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerExpedition.CustomFormat = "yyyy/MM/dd";
-
             // 
             // dateTimePickerBirth
             // 
-            this.dateTimePickerBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerBirth.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerBirth.Location = new System.Drawing.Point(143, 135);
             this.dateTimePickerBirth.Name = "dateTimePickerBirth";
-            this.dateTimePickerBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBirth.Size = new System.Drawing.Size(96, 20);
             this.dateTimePickerBirth.TabIndex = 19;
             // 
             // dateTimePickerIn
             // 
-            this.dateTimePickerIn.Location = new System.Drawing.Point(143, 169);
-            this.dateTimePickerIn.Name = "dateTimePickerIn";
-            this.dateTimePickerIn.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerIn.TabIndex = 20;
-            this.dateTimePickerIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerIn.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePickerIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerIn.Location = new System.Drawing.Point(367, 135);
+            this.dateTimePickerIn.Name = "dateTimePickerIn";
+            this.dateTimePickerIn.Size = new System.Drawing.Size(96, 20);
+            this.dateTimePickerIn.TabIndex = 20;
+            // 
+            // dataGridInfo
+            // 
+            this.dataGridInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column9,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column10});
+            this.dataGridInfo.Location = new System.Drawing.Point(-1, 248);
+            this.dataGridInfo.Name = "dataGridInfo";
+            this.dataGridInfo.Size = new System.Drawing.Size(642, 150);
+            this.dataGridInfo.TabIndex = 21;
+            // 
+            // Column1
+            // 
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "Primer Apellido";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "Segundo Apellido";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 70;
+            // 
+            // Column9
+            // 
+            this.Column9.Frozen = true;
+            this.Column9.HeaderText = "Fech. Nacimiento";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 70;
+            // 
+            // Column4
+            // 
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "Sexo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 30;
+            // 
+            // Column5
+            // 
+            this.Column5.Frozen = true;
+            this.Column5.HeaderText = "T. Documento";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 30;
+            // 
+            // Column6
+            // 
+            this.Column6.Frozen = true;
+            this.Column6.HeaderText = "Documento";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 70;
+            // 
+            // Column7
+            // 
+            this.Column7.Frozen = true;
+            this.Column7.HeaderText = "Fecha Exp.";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 70;
+            // 
+            // Column8
+            // 
+            this.Column8.Frozen = true;
+            this.Column8.HeaderText = "País";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 40;
+            // 
+            // Column10
+            // 
+            this.Column10.Frozen = true;
+            this.Column10.HeaderText = "Fech. Entrada";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 70;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 254);
+            this.ClientSize = new System.Drawing.Size(640, 396);
+            this.Controls.Add(this.dataGridInfo);
             this.Controls.Add(this.dateTimePickerIn);
             this.Controls.Add(this.dateTimePickerBirth);
             this.Controls.Add(this.dateTimePickerExpedition);
@@ -271,6 +382,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Checking Form";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +411,18 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerExpedition;
         private System.Windows.Forms.DateTimePicker dateTimePickerBirth;
         private System.Windows.Forms.DateTimePicker dateTimePickerIn;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.DataGridView dataGridInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
 
